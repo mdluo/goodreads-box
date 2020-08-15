@@ -5,7 +5,7 @@ import { Octokit } from '@octokit/rest';
 
 dotenv.config();
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 const request = got.extend({
   prefixUrl: 'https://www.goodreads.com',
