@@ -41,7 +41,7 @@ export async function getReviewShow(id: number): Promise<Goodreads.Review> {
 export async function updateGist(
   title: string,
   content: string
-): Promise<void> {
+): Promise<string> {
   const gist_id = process.env.GIST_ID || '';
   const gist = await octokit.gists.get({ gist_id });
   const filename = Object.keys(gist.data.files)[0];
@@ -54,4 +54,5 @@ export async function updateGist(
       },
     },
   });
+  return gist.url;
 }

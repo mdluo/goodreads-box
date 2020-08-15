@@ -55,11 +55,13 @@ function generateLines(books: Book[]) {
 (async () => {
   try {
     const books = await getBooks();
+    console.log(`Found ${books.length} book(s)`);
     const lines = generateLines(books);
-    await api.updateGist(
+    const url = await api.updateGist(
       `📚 Currently reading books (${lines.length}／${books.length})`,
       lines.join('\n')
     );
+    console.log(`Updated: ${url}`);
   } catch (error) {
     console.error(error);
     process.exit(1);
