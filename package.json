@@ -2,7 +2,7 @@
   "private": true,
   "name": "goodreads-box",
   "version": "1.0.0",
-  "description": "",
+  "description": "Update a pinned gist to show your currently reading books and progress on Goodreads",
   "license": "MIT",
   "scripts": {
     "start": "ts-node --files src/index.ts",
