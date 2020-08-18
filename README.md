@@ -22,8 +22,9 @@
 1. Fork this repo.
 1. Go to the repo Settings > Secrets.
 1. Add the following environment variables:
-  - **GOODREADS_API_KEY**: The Goodreads App Api Key.
-  - **GOODREADS_USER_ID**: Your Goodreads account id, can be found in the profile page url e.g. `https://www.goodreads.com/user/show/`**`118339107`**`-mdluo`
-  - **BOOKS_SORT_BY**: Optional, default value is `date` which means sort books by update time. Another valid value is `percent`, sort book by read percentage.
-  - **GH_TOKEN**: The GitHub personal access token generated above.
-  - **GIST_ID:** The ID portion from your new created gist url: `https://gist.github.com/mdluo/`**`f890a4d178012c5a3c5c29ff743a84e8`**.
+    - **GOODREADS_API_KEY**: The Goodreads App Api Key.
+    - **GOODREADS_USER_ID**: Your Goodreads account id, can be found in the profile page url e.g. `https://www.goodreads.com/user/show/`**`118339107`**`-mdluo`
+    - **BOOKS_SORT_BY**: Optional, default value is `date` which means sort books by update time. Another valid value is `percent`, sort book by read percentage.
+    - **GH_TOKEN**: The GitHub personal access token generated above.
+    - **GIST_ID:** The ID portion from your new created gist url: `https://gist.github.com/mdluo/`**`f890a4d178012c5a3c5c29ff743a84e8`**.
+1. Go to repo Actions, select "Update gist" from the left side and click the "Run workflow" button on the right side. From now on it will be running automatically by the GitHub Actions every 8 hours. Update the `- cron: "0 */8 * * *"` in `.github/workflows/schedule.yml` to change the frequency of the workflow trigger to meet your own needs.
